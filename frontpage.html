@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME!</title>
+    <link rel = "icon" href ="icon2.png" type = "image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  
+
+  <style>
+    *,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  /*box-sizing: border-box;*/
+}
+body {
+  min-height: 100vh;
+  justify-content: center;
+  background: hsl(220, 10%, 12%);
+  font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.screlements{
+  min-height: 100vh;
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.screlements .container{
+  margin: 5px;
+}
+
+.screlements h1{
+  font-size: 3rem;
+  margin: 20px;
+}
+.screlements h2{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.screlements .text-container{
+   display: flex;
+}
+.screlements .text-container .text-box{
+  margin: 20px;
+  padding: 20px;
+  /*: #00c2cb;*/
+}
+.screlements .text-container .text-box h3{
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+@media (max-width: 900px){
+  section h1{
+    font-size: 2rem;
+    text-align: center;
+  }
+  section .text-container{
+    flex-direction: column;
+  }
+}
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+ </style>
+  </head>
+<body>
+    <section class="nav-bar">
+    <div class="logo" style="font-family:'Great Vibes';">WanderLust Ways</div>
+        <div class="menu-container">
+        <ul class="menu">
+          <li><a href="frontpage.html">Home</a></li>
+        <li><a href="India.html">Destinations in India</a></li>
+        <li><a href="world.html">Destinations in World</a></li>
+        <li><a href="tovisit.html">Places To visit</a></li>
+        <li><a href="map.html">Map</a></li>
+         <li><a href="travel.html">Travel Plan</a></li>
+        
+        </ul>
+        </div>
+        <button class="toggle-button" onclick="toggleMenu()"><div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div></button>
+    </section>
+    
+    <br>
+    <div class="image-slider">
+      <figure class="slide">
+        <img id="image" style="width: 100%; height: 600px;" src="bm.jpg">
+        <div class="overlay" id="placename">&#128205;Dal Lake</div>
+      </figure>
+    </div>
+    <br>
+    <section class="screlements">
+      <div class="container reveal">
+        <div class="line"></div>
+              <h1 class="heading">Popular Places To Visit</h1>
+              <div class="line"></div>
+        <div class="text-container">
+          <div class="text-box">
+            <div class="flexbox">
+              <div class="image-container">
+                <img src="coorg.jpg" alt="Image">
+                <div class="text-overlay">Coorg</div>
+              </div>
+              <button><div class="heart"></div></button>
+              <button class="add-to-travel" onclick="addToTravelList('Madikeri')">Add to Travel List</button>
+            </div> 
+          </div>
+          <div class="text-box">
+            <div class="flexbox">
+              <div class="image-container">
+                <img src="ooty.jpg" alt="Image">
+                <div class="text-overlay">Ooty</div>
+              </div>
+              <button><div class="heart"></div></button>
+              <button class="add-to-travel" onclick="addToTravelList('Ooty')">Add to Travel List</button>
+            </div>
+            
+          </div>
+          <div class="text-box">
+            <div class="flexbox">
+              <div class="image-container">
+                <img src="dar.jpg" alt="Image">
+                <div class="text-overlay">Darjeeling</div>
+              </div>
+              <button><div class="heart"></div></button>
+              <button class="add-to-travel" onclick="addToTravelList('Darjeeling')">Add to Travel List</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    
+      <footer style="text-align: center; background-color: white;width: 100%;">
+        <h1 >Contact Us On </h1>
+        <br>
+  <p>
+    <a href="https://www.facebook.com/"><svg style="width: 50px; height:50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/></svg></a>
+    <a href="https://www.instagram.com/" ><svg style="width: 50px; height:50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z"/></svg></a>
+    <a href="https://www.linkedin.com/" ><svg style="width: 50px; height:50px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"/></svg></a>
+    
+  </p>
+  <br>
+  <p ><a style="color: black;text-decoration: none;" href="aboutme.php">More about the Creator</a></p>
+      </footer>
+    
+    
+    <script src="external.js"></script>
+    <script>
+      
+      var imageSources = ["bm1.jpg","bm2.jpg", "bm3.jpg", "bm4.jpg", "bm5.jpg", "bm7.jpg", "bm8.jpg", "bm9.jpg"];
+      var place = ["Bagan","Pamukkale", "Kuang Si Falls", "Yellowstone National Park", "Taj Mahal", "Aurora Borealis", "Sheikh Zayed Grand Mosque", "Iguazu Falls"];
+    
+      var index = 0;
+      setInterval(function() {
+        if (index === imageSources.length) {
+          index = 0;
+        }
+        document.getElementById("image").src = imageSources[index];
+        document.getElementById("placename").innerHTML =`&#128205;${place[index]}`;
+        index++;
+      }, 5000);
+
+      let tt= JSON.parse(localStorage.getItem('todo')) || [];
+     function addToTravelList(cardId){
+       if (tt.indexOf(cardId)==-1){
+         tt.push(cardId);
+         localStorage.setItem('todo',JSON.stringify(tt))
+       
+       }
+     }
+
+      function reveal() {
+      var reveals = document.querySelectorAll(".reveal");
+
+      for (var i = 0; i < reveals.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = reveals[i].getBoundingClientRect().top;
+        var elementVisible = 150;
+
+        if (elementTop < windowHeight - elementVisible) {
+          reveals[i].classList.add("active");
+        } else {
+          reveals[i].classList.remove("active");
+        }
+      }
+    }
+
+    window.addEventListener("scroll", reveal);
+    </script>
+</body>
+</html>
