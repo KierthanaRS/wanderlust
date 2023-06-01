@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>India</title>
+    <link rel = "icon" href ="icon2.png" type = "image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+
+
+body {
+  min-height: 100vh;
+  padding: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: hsl(220, 10%, 12%);
+  font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+  </style>
+</head>
+<body>
+    <section class="nav-bar">
+    <div class="logo" style="font-family:'Great Vibes';">WanderLust Ways</div>
+        <div class="menu-container">
+        <ul class="menu">
+          <li><a href="frontpage.html">Home</a></li>
+        <li><a href="India.html">Destinations in India</a></li>
+        <li><a href="world.html">Destinations in World</a></li>
+        <li><a href="tovisit.html">Places To visit</a></li>
+        <li><a href="map.html">Map</a></li>
+         <li><a href="travel.html">Travel Plan</a></li>
+        
+        </ul>
+        </div>
+        <button class="toggle-button" onclick="toggleMenu()"><div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div></button>
+    </section>
+    <br>
+    <br>
+    <div class="flip-card-container" style="--hue: 106">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="agra.jpeg" alt="Agra">
+            <figcaption>Agra</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Taj Mahal</li>
+            <li class="flip-li">Agra Fort</li>
+            <li class="flip-li">Sikandra Fort</li>
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="agra.jpeg" alt="Agra">
+          </figure>
+    
+          <button onclick="addToTravelList('Agra')">Add to Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+   
+    <div class="flip-card-container" style="--hue: 106">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="jaipur.jpg" alt="Jaipur">
+            <figcaption>Jaipur</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Hawa Mahal</li>
+            <li class="flip-li">Jantar Mantar</li>
+            <li class="flip-li">Chokhi Dhani</li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="jaipur.jpg" alt="Jaipur">
+          </figure>
+    
+          <button onclick="addToTravelList('Jaipur')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 106">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="konark.jpg" alt="Konark">
+            <figcaption>Konark</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Konark Temple</li>
+            <li class="flip-li">Ramchandi Beach</li>
+            <li class="flip-li">ASI Museum</li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="konark.jpg" alt="Konark">
+          </figure>
+    
+          <button onclick="addToTravelList('Konark')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 106">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="thanjur.jpg" alt="Thanjavur">
+            <figcaption>Thanjavur</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Brihadeesara Temple</li>
+            <li class="flip-li">Gangaikonda Cholapuram</li>
+            <li class="flip-li">Silver Beach</li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="thanjur.jpg" alt="Thanjavur">
+          </figure>
+    
+          <button onclick="addToTravelList('Thanjavur')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 106">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="alleppey.jpg" alt="Alappuzha">
+            <figcaption>Alappuzha</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Vembanad Lake</li>
+            <li class="flip-li">Pathiramanal Island</li>
+            <li class="flip-li">Marari Beach</li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="alleppey.jpg" alt="Alappuzha">
+          </figure>
+    
+          <button onclick="addToTravelList('Alappuzha')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 288">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="delhi.webp" alt="Delhi">
+            <figcaption>Delhi</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">India Gate</li>
+            <li class="flip-li">Lotus Temple</li>
+            <li class="flip-li">Humayun’s Tomb<samp></samp></li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="delhi.webp" alt="Delhi">
+          </figure>
+    
+          <button onclick="addToTravelList('Delhi')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 288">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="mumbai.webp" alt="Mumbai">
+            <figcaption>Mumbai</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Gate way of India</li>
+            <li class="flip-li">Elephant Caves</li>
+            <li class="flip-li">SanjayGandhi Park<samp></samp></li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="mumbai.webp" alt="Mumbai">
+          </figure>
+    
+          <button onclick="addToTravelList('Mumbai')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 288">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="Chennai.jpg" alt="Chennai">
+            <figcaption>Chennai</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Marina Beach</li>
+            <li class="flip-li">Mahabalipuram</li>
+            <li class="flip-li">T-Nagar</li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="Chennai.jpg" alt="Chennai">
+          </figure>
+    
+          <button onclick="addToTravelList('Chennai')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 49">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="goa.jpg" alt="Goa">
+            <figcaption>Goa</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Canacona</li>
+            <li class="flip-li">Bardex</li>
+            <li class="flip-li">Panajim</li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="goa.jpg" alt="Goa">
+          </figure>
+    
+          <button onclick="addToTravelList('Goa')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 49">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="Gokarna.jpg" alt="Gokarna">
+            <figcaption>Gokarna</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Mahabaleshara Temple</li>
+            <li class="flip-li">Kudle Beach</li>
+            <li class="flip-li">Yana Caves</li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="Gokarna.jpg" alt="Gokarna">
+          </figure>
+    
+          <button onclick="addToTravelList('Gokarna')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <div class="flip-card-container" style="--hue: 49">
+      <div class="flip-card">
+    
+        <div class="card-front">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="laks.webp" alt="Lakshadweep">
+            <figcaption>Lakshadweep</figcaption>
+          </figure>
+    
+          <ul class="flip">
+            <li class="flip-li">Agatti Island</li>
+            <li class="flip-li">Kavaratti</li>
+            <li class="flip-li">Minicoy</li>
+            
+          </ul>
+        </div>
+    
+        <div class="card-back">
+          <figure>
+            <div class="img-bg"></div>
+            <img src="laks.webp" alt="Lakshadweep">
+          </figure>
+    
+          <button onclick="addToTravelList('Lakshadweep')">Add To Travel List</button>
+    
+          <div class="design-container">
+            <span class="design design--1"></span>
+            <span class="design design--2"></span>
+            <span class="design design--3"></span>
+            <span class="design design--4"></span>
+            <span class="design design--5"></span>
+            <span class="design design--6"></span>
+            <span class="design design--7"></span>
+            <span class="design design--8"></span>
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!-- /flip-card-container -->
+    <script src="external.js"></script>
+    <script>
+      let tt= JSON.parse(localStorage.getItem('todo')) || [];
+     function addToTravelList(cardId){
+       if (tt.indexOf(cardId)==-1){
+         tt.push(cardId);
+         localStorage.setItem('todo',JSON.stringify(tt))
+       
+       }
+     }
+
+
+   </script>
+    
+   
+    
+  
+</body>
+</html>

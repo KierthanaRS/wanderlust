@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations in World</title>
+    <link rel = "icon" href ="icon2.png" type = "image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+  min-height: 100vh;
+  padding: 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: hsl(220, 10%, 12%);
+  font-family: "Lato", "Segoe Ui", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+  </style>
+ 
+</head>
+<body>
+  <section class="nav-bar">
+    <div class="logo" style="font-family:'Great Vibes';">WanderLust Ways</div>
+        <div class="menu-container">
+        <ul class="menu">
+          <li><a href="frontpage.html">Home</a></li>
+        <li><a href="India.html">Destinations in India</a></li>
+        <li><a href="world.html">Destinations in World</a></li>
+        <li><a href="tovisit.html">Places To visit</a></li>
+        <li><a href="map.html">Map</a></li>
+         <li><a href="travel.html">Travel Plan</a></li>
+        
+        </ul>
+        </div>
+        <button class="toggle-button" onclick="toggleMenu()"><div class="container" onclick="myFunction(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div></button>
+    </section>
+<br>
+<br>
+<div class="flip-card-container" style="--hue: 106">
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="paris.jpg" alt="Paris">
+        <figcaption>Paris</figcaption>
+      </figure>
+
+      <ul class="flip">
+        <li class="flip-li">Eiffel Tower</li>
+        <li class="flip-li">Lopuvre Museum</li>
+        <li class="flip-li">Montmartre</li>
+      </ul>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="paris.jpg" alt="Paris">
+      </figure>
+
+      <button onclick="addToTravelList('Paris')">Add to Travel List</button>
+
+      <div class="design-container">
+        <span class="design design--1"></span>
+        <span class="design design--2"></span>
+        <span class="design design--3"></span>
+        <span class="design design--4"></span>
+        <span class="design design--5"></span>
+        <span class="design design--6"></span>
+        <span class="design design--7"></span>
+        <span class="design design--8"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Flip Card-container -->
+<div class="flip-card-container" style="--hue: 106">
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="venice.jpg" alt="Venice">
+        <figcaption>Venice</figcaption>
+      </figure>
+
+      <ul class="flip">
+        <li class="flip-li">Rialto Bridge</li>
+        <li class="flip-li">Saint Mark's Basilica</li>
+        <li class="flip-li">Grand canal</li>
+      </ul>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="venice.jpg" alt="Venice">
+      </figure>
+
+      <button onclick="addToTravelList('Venice')">Add to Travel List</button>
+
+      <div class="design-container">
+        <span class="design design--1"></span>
+        <span class="design design--2"></span>
+        <span class="design design--3"></span>
+        <span class="design design--4"></span>
+        <span class="design design--5"></span>
+        <span class="design design--6"></span>
+        <span class="design design--7"></span>
+        <span class="design design--8"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--Flip card-container-->
+<div class="flip-card-container" style="--hue: 106">
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="london.jpg" alt="London">
+        <figcaption>London</figcaption>
+      </figure>
+
+      <ul class="flip">
+        <li class="flip-li">Big Ben</li>
+        <li class="flip-li">Harry Potter Studio</li>
+        <li class="flip-li">London Eye</li>
+      </ul>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="london.jpg" alt="London">
+      </figure>
+
+      <button onclick="addToTravelList('London')">Add to Travel List</button>
+
+      <div class="design-container">
+        <span class="design design--1"></span>
+        <span class="design design--2"></span>
+        <span class="design design--3"></span>
+        <span class="design design--4"></span>
+        <span class="design design--5"></span>
+        <span class="design design--6"></span>
+        <span class="design design--7"></span>
+        <span class="design design--8"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--Flip card-container-->
+<div class="flip-card-container" style="--hue: 288">
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="seoul.jpg" alt="Seoul">
+        <figcaption>Seoul</figcaption>
+      </figure>
+
+      <ul class="flip">
+        <li class="flip-li">Lotte World</li>
+        <li class="flip-li">Gangnam Station</li>
+        <li class="flip-li">Olympic Park</li>
+      </ul>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="seoul.jpg" alt="Seoul">
+      </figure>
+
+      <button onclick="addToTravelList('Seoul')">Add to Travel List</button>
+
+      <div class="design-container">
+        <span class="design design--1"></span>
+        <span class="design design--2"></span>
+        <span class="design design--3"></span>
+        <span class="design design--4"></span>
+        <span class="design design--5"></span>
+        <span class="design design--6"></span>
+        <span class="design design--7"></span>
+        <span class="design design--8"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--Flip card-container-->
+<div class="flip-card-container" style="--hue: 288">
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="tokyo.jpg" alt="Tokyo">
+        <figcaption>Tokyo</figcaption>
+      </figure>
+
+      <ul class="flip">
+        <li class="flip-li">Mt.Fuji</li>
+        <li class="flip-li">Tokyo Skytree</li>
+        <li class="flip-li">Sensō-ji</li>
+      </ul>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="tokyo.jpg" alt="Tokyo">
+      </figure>
+
+      <button onclick="addToTravelList('Tokyo')">Add to Travel List</button>
+
+      <div class="design-container">
+        <span class="design design--1"></span>
+        <span class="design design--2"></span>
+        <span class="design design--3"></span>
+        <span class="design design--4"></span>
+        <span class="design design--5"></span>
+        <span class="design design--6"></span>
+        <span class="design design--7"></span>
+        <span class="design design--8"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Flip card-container-->
+<div class="flip-card-container" style="--hue: 288">
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="shanghai.webp" alt="Shanghai">
+        <figcaption>Shanghai</figcaption>
+      </figure>
+
+      <ul class="flip">
+        <li class="flip-li">The Bund</li>
+        <li class="flip-li">Jade Buddha Temple</li>
+        <li class="flip-li">Shanghai Tower</li>
+      </ul>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="shanghai.webp" alt="Shanghai">
+      </figure>
+
+      <button onclick="addToTravelList('Shanghai')">Add to Travel List</button>
+
+      <div class="design-container">
+        <span class="design design--1"></span>
+        <span class="design design--2"></span>
+        <span class="design design--3"></span>
+        <span class="design design--4"></span>
+        <span class="design design--5"></span>
+        <span class="design design--6"></span>
+        <span class="design design--7"></span>
+        <span class="design design--8"></span>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!--Flip card-container-->
+
+<div class="flip-card-container" style="--hue: 344">
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="miami.jpg" alt="Miami">
+        <figcaption>Miami</figcaption>
+      </figure>
+
+      <ul class="flip">
+        <li class="flip-li">Jungle Island</li>
+        <li class="flip-li">Little Havana</li>
+        <li class="flip-li">South Beach</li>
+      </ul>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="miami.jpg" alt="Miami">
+      </figure>
+
+      <button onclick="addToTravelList('Miami')">Add to Travel List</button>
+
+      <div class="design-container">
+        <span class="design design--1"></span>
+        <span class="design design--2"></span>
+        <span class="design design--3"></span>
+        <span class="design design--4"></span>
+        <span class="design design--5"></span>
+        <span class="design design--6"></span>
+        <span class="design design--7"></span>
+        <span class="design design--8"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Flip card-container-->
+<div class="flip-card-container" style="--hue: 344">
+  <div class="flip-card">
+
+    <div class="card-front">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="norway.webp" alt="Norway">
+        <figcaption>Norway</figcaption>
+      </figure>
+
+      <ul class="flip">
+        <li class="flip-li">Lofoten</li>
+        <li class="flip-li">Oslo region</li>
+        <li class="flip-li">Bergen</li>
+      </ul>
+    </div>
+
+    <div class="card-back">
+      <figure>
+        <div class="img-bg"></div>
+        <img src="norway.webp" alt="Norway">
+      </figure>
+
+      <button onclick="addToTravelList('Norway')">Add to Travel List</button>
+
+      <div class="design-container">
+        <span class="design design--1"></span>
+        <span class="design design--2"></span>
+        <span class="design design--3"></span>
+        <span class="design design--4"></span>
+        <span class="design design--5"></span>
+        <span class="design design--6"></span>
+        <span class="design design--7"></span>
+        <span class="design design--8"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Flip card-container-->
+<script src="external.js"></script>
+<script>
+  let tt= JSON.parse(localStorage.getItem('todo')) || [];
+function addToTravelList(cardId){
+  if (tt.indexOf(cardId)==-1){
+    tt.push(cardId);
+  console.log(cardId)
+  console.log(tt)
+  localStorage.setItem('todo',JSON.stringify(tt))
+  console.log(localStorage)
+  }
+}
+</script>
+</body>
+</html>

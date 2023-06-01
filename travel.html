@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Lobster&family=Great+Vibes&family=Amatic+SC&display=swap">
+    <title>Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       h1 {
+        text-align: center;
+        
+       margin-top: 25px;
+        margin-bottom: 0; /* Add this line to remove bottom margin */
+        margin-left: auto; /* Set margin-left to auto to center the heading */
+        margin-right: auto; /* Set margin-right to auto to center the heading */
+        background: -webkit-linear-gradient(rgb(245, 119, 218), white, rgb(230, 209, 20));
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+        #my-div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .image-container {
+            /*display: flex;*/
+            justify-content: center;
+            align-items: center;
+            margin-left: 10%;
+            gap: 100px; /* Adds spacing between images */
+        }
+        h2{
+            position: relative;
+            
+			background: -webkit-linear-gradient( rgb(29, 58, 226),white, rgb(122, 230, 20));
+			background-clip: text;
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+		    /*margin-left: 47%;*/
+            font-size: 175%;
+		}
+        body {
+			margin: 10px;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #0f0e0e;
+		}
+		
+		.alink{
+		
+		 justify-content: center;
+         gap:10px;
+		 height: 70%;
+		 width: 80%;
+		 margin-left: 10px;
+		}
+        #error{
+            text-align: center;
+            color: #fff;
+            margin-top: 10%;
+            font-size:x-large;
+        }
+        #my-paragraph{
+            display:block;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-left: 0%;
+
+        }
+    </style>
+</head>
+<body>
+    <section class="nav-bar">
+        <div class="logo" style="font-family:'Great Vibes';">WanderLust Ways</div>
+            <div class="menu-container">
+            <ul class="menu">
+              <li><a href="frontpage.html">Home</a></li>
+            <li><a href="India.html">Destinations in India</a></li>
+            <li><a href="world.html">Destinations in World</a></li>
+            <li><a href="tovisit.html">Places To visit</a></li>
+            <li><a href="map.html">Map</a></li>
+             <li><a href="travel.html">Travel Plan</a></li>
+            
+            </ul>
+            </div>
+            <button class="toggle-button" onclick="toggleMenu()"><div class="container" onclick="myFunction(this)">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div></button>
+        </section>
+<h1>Travel Plan</h1>
+<br>
+
+		<div id="my-div">
+			<p id="my-paragraph">
+                
+            </p>
+            
+		</div>
+        <div id="error"></div>  
+        <script src="external.js"></script>
+    <script>
+		    const place=[];
+            const locationData = JSON.parse(localStorage.getItem('todo')) || [];
+            var paragraph = document.getElementById("my-paragraph");
+            var error=document.getElementById('error')
+            if(locationData.length==0){
+                error.innerHTML=` Add places to travel list to view plans`
+            }
+            else{
+                for(i=0;i<locationData.length;i++){
+                    const city=locationData[i];
+                    if(city=='Madikeri'){
+                        paragraph.innerHTML+=`<br><h2>Coorg</h2>
+                        <br>
+                            <a className="alink" href=plane.php?city=${city}>
+                                <img src="travel.jpg" alt="Travel" />
+                            </a>
+                            <a className="alink" href=place.php?city=${city}>
+                                <img src="days.jpg" alt="Days" />
+                            </a>
+                            <a className="alink" href="food.html">
+                                <img src="food.jpg" alt="Food" />
+                            </a>
+                            <a className="alink" href=weather.html?city=${city}>
+                                <img src="weather.jpg" alt="Weather" />
+                            </a>
+                           <br>
+                           <br>
+                            `
+                    }
+                    else{
+                    paragraph.innerHTML+=`<br><h2>${city}</h2>
+                    <br>
+                            <a className="alink" href=plane.php?city=${city}>
+                                <img src="travel.jpg" alt="Travel" />
+                            </a>
+                            <a className="alink" href=place.php?city=${city}>
+                                <img src="days.jpg" alt="Days" />
+                            </a>
+                            <a className="alink" href="food.html">
+                                <img src="food.jpg" alt="Food" />
+                            </a>
+                            <a className="alink" href=weather.html?city=${city}>
+                                <img src="weather.jpg" alt="Weather" />
+                            </a>
+                           <br>
+                           <br>
+                            `
+                            document.getElementById("my-div").style.display = "block";          
+                }
+            }
+        }
+</script>
+</body>
+</html>

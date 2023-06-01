@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel = "icon" href ="icon2.png" type = "image/x-icon">
+    <title>Map</title>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <section class="nav-bar">
+      <div class="logo" style="font-family:'Great Vibes';">WanderLust Ways</div>
+          <div class="menu-container">
+          <ul class="menu">
+            <li><a href="frontpage.html">Home</a></li>
+          <li><a href="India.html">Destinations in India</a></li>
+          <li><a href="world.html">Destinations in World</a></li>
+          <li><a href="tovisit.html">Places To visit</a></li>
+          <li><a href="map.html">Map</a></li>
+           <li><a href="travel.html">Travel Plan</a></li>
+          
+          </ul>
+          </div>
+          <button class="toggle-button" onclick="toggleMenu()"><div class="container" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div></button>
+      </section>
+  <br>
+    <h1 style="text-align: center;color: white;">Locate The Places</h1>
+    <br>
+    
+    <div id="map"></div>
+    <script src="external.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDY4DKIcDv1_3SQpiOYEnKmdsIiZYuUGBY&callback=initMap"
+    async defer></script>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: 20.5937, lng: 78.9629}; // Set initial position of the map
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 5, // Set the zoom level
+          center: myLatLng // Set the center of the map to the initial position
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          title: 'India' // Set the marker title
+        });
+      }
+    </script>
+  </body>
+</html>
